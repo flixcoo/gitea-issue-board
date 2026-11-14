@@ -1,0 +1,9 @@
+services:
+  issue-board:
+    build: .
+    image: gitea-issue-board:latest
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      # Bind to localhost only – put a reverse proxy with TLS (Caddy, Traefik, nginx) in front
+      - "127.0.0.1:3000:3000"

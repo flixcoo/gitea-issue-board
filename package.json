@@ -1,0 +1,22 @@
+{
+  "name": "gitea-issue-board",
+  "version": "1.0.0",
+  "description": "GitLab-style issue board for Gitea, driven by scoped labels",
+  "type": "module",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch --env-file=.env src/server.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "memorystore": "^1.6.8",
+    "sortablejs": "^1.15.7"
+  }
+}
