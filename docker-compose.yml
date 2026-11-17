@@ -6,10 +6,9 @@ services:
     restart: unless-stopped
     env_file: .env
     ports:
-      - "3001:80"
+      - "127.0.0.1:3001:3001"
     networks:
       - web
-
 
 networks:
   web:
