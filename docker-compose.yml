@@ -2,12 +2,14 @@ services:
   issue-board:
     build: .
     image: gitea-issue-board:latest
+    container_name: gitea-issue-board
     restart: unless-stopped
     env_file: .env
     ports:
-      - "127.0.0.1:3001:80"
+      - "3001:80"
     networks:
       - web
+
 
 networks:
   web:
